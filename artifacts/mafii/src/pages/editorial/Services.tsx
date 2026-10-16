@@ -63,7 +63,7 @@ function selectCategory(id: string) {
   setSearch("");
 }
 return <SiteShell active="Services">
-  <section className="mf-wrap mf-compact-head mf-information-head"><h1>Services & Prices</h1><p>Every service, with clear prices. Select one to see exactly what’s covered.</p></section>
+  <section className="mf-wrap mf-compact-head mf-information-head"><h1>Waxing Services</h1><p>Every service, with clear prices. Select one to see exactly what’s covered.</p></section>
   <div className="mf-stripes" aria-hidden="true"/>
   <section className="mf-wrap mf-services-layout" aria-label="Service menu">
     <div className="mf-services-nav">
