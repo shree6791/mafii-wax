@@ -7,6 +7,15 @@ Business identity matched: Mafii Wax Studio, 550 Showers Dr D006, Studio 21, Mou
 
 ## Excerpts used
 
+Added October 16, 2026 from review text the user copied from the public Google listing (verbatim; "[I’ve]" replaces the original "Ive" in Kyle's review):
+
+- Traci Groening-Wang: “I’ve been waxing for many years and Armeis is thorough and considerate, with excellent products and an immaculately hygienic and welcoming work space.”
+- Kyle: “After trying multiple wax studios, hers is the best [I’ve] found in this area.”
+- Sammy 913: “I'm relatively new to getting waxed and Armeis made it so easy and comfortable.”
+- Sofia Ferreira: “She takes the time to listen to what you want and makes sure you're comfortable the entire time.”
+
+Earlier excerpts:
+
 - Neena Umpad: “From the very first day I walked through her door, she made me feel comfortable and cared for.”
 - Roots: “she made the entire experience feel comfortable and professional from start to finish.”
 
