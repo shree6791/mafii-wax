@@ -54,4 +54,7 @@
  .mafii-refined.refined-inner .mf-contact-map iframe { height:260px; }
 }
 
-.mafii-refined .mf-social a{text-decoration:underline;text-underline-offset:3px}
+.mafii-refined .mf-social{display:flex;gap:10px;margin-top:6px}
+.mafii-refined .mf-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #555;border-radius:50%;color:#fff;transition:background .2s,color .2s}
+.mafii-refined .mf-social a:hover,.mafii-refined .mf-social a:focus-visible{background:#fff;color:#000}
+.mafii-refined .mf-social svg{width:15px;height:15px}

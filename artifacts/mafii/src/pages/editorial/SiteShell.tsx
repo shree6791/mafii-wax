@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
+import { FaGoogle, FaYelp } from "react-icons/fa";
 import "./SiteShell.css";
 import { usePageMeta } from "../../lib/site";
 import { pageMetadata } from "../../lib/page-metadata";
@@ -78,7 +79,10 @@ export function SiteShell({ children, active: selected = "" }: { children: React
             <a href="tel:+16509306516">650.930.6516</a>
             <a href="mailto:contact@mafiiwaxstudio.com">contact@mafiiwaxstudio.com</a>
             <span>Tue–Fri 9–6 · Sat 8–4</span>
-            <span className="mf-social"><a href="https://www.google.com/maps/search/MAFII+Wax+Studio+Mountain+View/" target="_blank" rel="noopener noreferrer">Google reviews</a> · <a href="https://yelp.to/Vn-Wj6MKaj" target="_blank" rel="noopener noreferrer">Yelp</a></span>
+            <span className="mf-social">
+              <a href="https://www.google.com/maps/search/MAFII+Wax+Studio+Mountain+View/" target="_blank" rel="noopener noreferrer" aria-label="MAFII reviews on Google (opens in a new tab)" title="Google reviews"><FaGoogle aria-hidden="true" /></a>
+              <a href="https://yelp.to/Vn-Wj6MKaj" target="_blank" rel="noopener noreferrer" aria-label="MAFII on Yelp (opens in a new tab)" title="Yelp"><FaYelp aria-hidden="true" /></a>
+            </span>
           </div>
         </div>
       </div>
