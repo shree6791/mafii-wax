@@ -6,6 +6,7 @@ import { usePageMeta } from "../../lib/site";
 import { pageMetadata } from "../../lib/page-metadata";
 import { booking, page, nav, giftCards } from "../../lib/site-links";
 import { bookingUrl, trackBookClick, trackGiftCardClick } from "../../lib/analytics";
+import { currentSeason } from "../../lib/seasons";
 
 export function GiftCardLink({ placement, children = "Gift cards" }: { placement: string; children?: ReactNode }) {
   return <a href={bookingUrl(giftCards, placement)} target="_blank" rel="noopener noreferrer" onClick={() => trackGiftCardClick(placement)}>{children}</a>;
@@ -29,6 +30,7 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
   const meta = pageMetadata[active] ?? pageMetadata.Home;
   usePageMeta(meta.title, meta.description);
   const [open, setOpen] = useState(false);
+  const [season] = useState(currentSeason);
   const menuButton = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -46,6 +48,9 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
   const scope = active === "Services" ? "mafii-services-compact" : active === "FirstVisit" ? "mafii-faq-compact" : active === "About" ? "mafii-about-compact" : active === "Visit" ? "mafii-contact-compact" : "";
   return <div className={scope}><div className={`mafii-refined hero-balanced${active ? " refined-inner" : ""}`}><div className="mf">
     <a href="#mf-main" className="mf-skip">Skip to content</a>
+    {season && <p className="mf-season" data-season={season.id}>{season.message} {season.action === "gift"
+      ? <GiftCardLink placement={`season_${season.id}`}>Shop gift cards</GiftCardLink>
+      : <a href={bookingUrl(booking, `season_${season.id}`)} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick(`season_${season.id}`)}>Book now</a>}</p>}
     <header className="mf-header">
       <div className="mf-wrap mf-nav">
         <a className="mf-brand" href={page("PersonalSpecialist")} aria-label="MAFII home">MAFII<small>WAX STUDIO</small></a>

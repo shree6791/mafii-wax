@@ -6,6 +6,7 @@ Multipage website for an inclusive waxing studio in Mountain View, California, w
 
 - Website pages live in `artifacts/mafii/src/pages/editorial`; route and asset helpers live in `artifacts/mafii/src/lib`.
 - The design-canvas sandbox (`artifacts/mockup-sandbox`) was removed in October 2026; its exploratory designs remain in git history.
+- A seasonal bar at the top of every page switches on by date (Pacific time) for gift-card holidays and beach-ready booking seasons. Windows and wording live in `artifacts/mafii/src/lib/seasons.ts`; preview one with `?season=<id>`.
 - `docs/` holds the GitHub Pages preview build (https://shree6791.github.io/mafii-wax/), marked noindex. Rebuild it after site changes with `pnpm --filter @workspace/mafii run build:pages`.
 - The old request-form frontend has been retired. Historical request records and the backend API are preserved; do not delete customer data as part of cleanup.
 

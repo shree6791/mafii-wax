@@ -90,3 +90,7 @@
 .mafii-refined.refined-inner .mf-about-layout{align-items:center}
 .mafii-refined .mf details p a{text-decoration:underline;text-underline-offset:3px}
 .mafii-refined .mf-footer nav>a:last-child{grid-column:auto}
+
+/* Seasonal gift-card bar (shown only inside a holiday window) */
+.mafii-refined .mf-season{margin:0;background:#171717;color:#f2f2f2;text-align:center;font-size:12px;letter-spacing:.02em;padding:10px 20px;line-height:1.5}
+.mafii-refined .mf-season a{color:#fff;text-decoration:underline;text-underline-offset:3px;margin-left:6px;white-space:nowrap}
