@@ -1,5 +1,6 @@
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
 export const booking = "https://mafiiwaxstudio.glossgenius.com/services";
+export const giftCards = "https://mafiiwaxstudio.glossgenius.com/shop/gift-cards";
 export const directions = "https://www.google.com/maps/dir/?api=1&destination=550+Showers+Drive+D006+Mountain+View+CA+94040";
 const routes: Record<string, string> = {
   PersonalSpecialist: "", Services: "services",

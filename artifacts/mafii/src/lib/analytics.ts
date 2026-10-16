@@ -41,6 +41,11 @@ export function trackPageView(path: string) {
   window.fbq?.("track", "PageView");
 }
 
+export function trackGiftCardClick(placement: string) {
+  window.gtag?.("event", "gift_card_click", { placement });
+  window.fbq?.("trackCustom", "GiftCardClick", { placement });
+}
+
 export function trackBookClick(placement: string) {
   window.gtag?.("event", "book_click", { placement });
   window.fbq?.("track", "Lead", { content_name: placement });

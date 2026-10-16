@@ -88,3 +88,4 @@
 @media (max-width:767px){.mafii-refined.refined-inner .mf-contact-layout{grid-template-columns:1fr;gap:32px}.mafii-refined.refined-inner .mf-contact-map iframe{height:240px}}
 /* About: centre the copy against the photo */
 .mafii-refined.refined-inner .mf-about-layout{align-items:center}
+.mafii-refined .mf details p a{text-decoration:underline;text-underline-offset:3px}
