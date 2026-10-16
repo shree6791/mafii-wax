@@ -6,7 +6,6 @@ export function Visit() {
     <section className="mf-wrap mf-section mf-contact-layout">
       <div className="mf-contact-info">
         <div className="mf-contact-block">
-        <h2>Questions before you book?</h2>
         <dl className="mf-contact-methods">
           <div><dt>Phone</dt><dd><a href="tel:+16509306516">650.930.6516</a></dd></div>
           <div><dt>Email</dt><dd><a href="mailto:contact@mafiiwaxstudio.com">contact@mafiiwaxstudio.com</a></dd></div>
