@@ -9,7 +9,7 @@ export function PersonalSpecialist() {
       <div className="refined-hero-layout">
         <div className="refined-hero-copy">
         <h1>Waxing,<br />refined.</h1>
-        <div className="ps-hero-intro"><p>Leave smooth, confident and cared for. Brazilian and full-body waxing by one expert, in a private studio in Mountain View.</p><Book placement="home_hero" /></div>
+        <div className="ps-hero-intro"><p>Leave smooth, confident and cared for. Brazilian and full-body waxing in a private studio in Mountain View.</p><Book placement="home_hero" /></div>
         </div>
         <figure className="refined-hero-photo"><img src={image("studio-interior.jpg")} alt="Inside MAFII’s private studio: lit shelves, an arched black mirror and orchids" fetchPriority="high" /></figure>
       </div>
