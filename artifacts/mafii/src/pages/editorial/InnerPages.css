@@ -58,3 +58,18 @@
 .mafii-refined .mf-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #555;border-radius:50%;color:#fff;transition:background .2s,color .2s}
 .mafii-refined .mf-social a:hover,.mafii-refined .mf-social a:focus-visible{background:#fff;color:#000}
 .mafii-refined .mf-social svg{width:15px;height:15px}
+
+/* Phone layout: shorter pages, single-row tabs, lighter header and footer */
+@media (max-width:767px){
+  .mafii-refined .mf-mobile-book .mf-book{padding:11px 20px;font-size:12px}
+  .mafii-refined .home-service-layout .ps-photo{display:none}
+  .mafii-refined .refined-studio-photos{grid-template-columns:1fr}
+  .mafii-refined .home-studio .refined-detail{display:none}
+  .mafii-refined .refined-studio-photos img{height:260px;width:100%;object-fit:cover}
+  .mafii-refined.refined-inner .mf-faq-tabs,.mafii-services-compact .mf-services-nav .mf-faq-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-right:-20px;padding-right:20px}
+  .mafii-refined.refined-inner .mf-faq-tabs::-webkit-scrollbar{display:none}
+  .mafii-refined.refined-inner .mf-faq-tabs button{flex:0 0 auto;white-space:nowrap}
+  .mafii-refined .mf-services-search{display:none}
+  .mafii-refined .mf-footer .mf-footer-nav{display:none}
+  .mafii-refined .mf-footer-grid{gap:20px}
+}

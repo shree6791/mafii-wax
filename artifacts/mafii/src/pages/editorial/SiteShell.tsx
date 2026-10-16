@@ -9,9 +9,9 @@ import { bookingUrl, trackBookClick } from "../../lib/analytics";
 export { booking, page, image } from "../../lib/site-links";
 
 const bookingLabel = "Book Appointment";
-export function Book({ placement }: { placement: string }) {
+export function Book({ placement, label = bookingLabel }: { placement: string; label?: string }) {
   return <a className="mf-book" href={bookingUrl(booking, placement)} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick(placement)}>
-    {bookingLabel}
+    {label}
   </a>;
 }
 
@@ -46,7 +46,7 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
       <div className="mf-wrap mf-nav">
         <a className="mf-brand" href={page("PersonalSpecialist")} aria-label="MAFII home">MAFII<small>WAX STUDIO</small></a>
         <nav className="mf-navlinks" aria-label="Main navigation"><NavigationLinks active={active} /><Book placement="header" /></nav>
-        <div className="mf-mobile-book"><Book placement="header_mobile" /></div>
+        <div className="mf-mobile-book"><Book placement="header_mobile" label="Book" /></div>
         <button ref={menuButton} className="mf-menu" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mf-mobile" onClick={() => setOpen(!open)}>
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
@@ -63,7 +63,7 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
             <a className="mf-brand" href={page("PersonalSpecialist")} aria-label="MAFII home">MAFII</a>
             <p>Always inclusive and intentional.</p>
           </div>
-          <nav aria-label="Footer navigation">
+          <nav className="mf-footer-nav" aria-label="Footer navigation">
             <NavigationLinks /><a href={bookingUrl(booking, "footer")} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick("footer")}>{bookingLabel}</a>
           </nav>
           <div className="mf-contact">
