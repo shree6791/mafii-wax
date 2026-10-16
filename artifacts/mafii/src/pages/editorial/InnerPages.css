@@ -86,8 +86,10 @@
 .mafii-refined.refined-inner .mf-contact-hours h2{margin:0 0 12px;line-height:1}
 .mafii-refined.refined-inner .mf-contact-map iframe{height:200px}
 @media (max-width:767px){.mafii-refined.refined-inner .mf-contact-layout{grid-template-columns:1fr;gap:32px}.mafii-refined.refined-inner .mf-contact-map iframe{height:240px}}
-/* About: centre the copy against the photo */
-.mafii-refined.refined-inner .mf-about-layout{align-items:center}
+/* About: copy starts level with the photo; photo sized to the copy */
+.mafii-refined.refined-inner .mf-about-layout{align-items:start}
+.mafii-refined.refined-inner .mf-about-copy h2{margin-top:-6px}
+@media (min-width:768px){.mafii-refined.refined-inner .mf-about-photo img{height:272px}}
 .mafii-refined .mf details p a{text-decoration:underline;text-underline-offset:3px}
 .mafii-refined .mf-footer nav>a:last-child{grid-column:auto}
 
