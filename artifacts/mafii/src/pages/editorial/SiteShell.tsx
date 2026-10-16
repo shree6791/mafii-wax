@@ -57,6 +57,7 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
       </div>
       <nav hidden={!open} className="mf-mobile" id="mf-mobile" aria-label="Mobile navigation">
         <NavigationLinks active={active} />
+        <GiftCardLink placement="mobile_menu" />
       </nav>
     </header>
     <main id="mf-main" tabIndex={-1}>{children}</main>
@@ -68,13 +69,12 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
             <p>Always inclusive and intentional.</p>
           </div>
           <nav className="mf-footer-nav" aria-label="Footer navigation">
-            <NavigationLinks /><a href={bookingUrl(booking, "footer")} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick("footer")}>{bookingLabel}</a>
+            <NavigationLinks /><a href={bookingUrl(booking, "footer")} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick("footer")}>{bookingLabel}</a><GiftCardLink placement="footer" />
           </nav>
           <div className="mf-contact">
             <a href="tel:+16509306516">650.930.6516</a>
             <a href="mailto:contact@mafiiwaxstudio.com">contact@mafiiwaxstudio.com</a>
             <span>Tue–Fri 9–6 · Sat 8–4</span>
-            <GiftCardLink placement="footer" />
             <span className="mf-social">
               <a href="https://www.google.com/maps/search/MAFII+Wax+Studio+Mountain+View/" target="_blank" rel="noopener noreferrer" aria-label="MAFII reviews on Google (opens in a new tab)" title="Google reviews"><FaGoogle aria-hidden="true" /></a>
               <a href="https://yelp.to/Vn-Wj6MKaj" target="_blank" rel="noopener noreferrer" aria-label="MAFII on Yelp (opens in a new tab)" title="Yelp"><FaYelp aria-hidden="true" /></a>
