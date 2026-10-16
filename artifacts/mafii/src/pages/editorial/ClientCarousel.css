@@ -1,0 +1,36 @@
+.ps-client-carousel { padding:32px 0 40px; background:#fff; color:#000; border-top:1px solid #000; }
+.ps-client-layout { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr); gap:40px; align-items:center; }
+.ps .ps-client-intro h2 { font-size:clamp(36px,3.6vw,50px); line-height:1.05; max-width:290px; }
+.ps-client-intro h2 em { display:block; }
+.ps-client-controls { display:flex; gap:8px; align-items:center; margin-top:26px; }
+.ps-client-controls button { width:44px; height:44px; border:1px solid #000; border-radius:50%; display:grid; place-items:center; background:#fff; color:#000; }
+.ps-client-controls button svg { width:18px; height:18px; transition:transform .2s ease; }
+.ps-client-controls button:hover:not([aria-disabled=true]) svg { transform:translateX(2px); }
+.ps-client-controls button:first-child:hover:not([aria-disabled=true]) svg { transform:translateX(-2px); }
+.ps-client-controls button[aria-disabled=true] { opacity:.3; cursor:default; }
+.ps-client-count { margin-left:10px; font-size:10px; letter-spacing:.12em; font-variant-numeric:tabular-nums; }
+.ps-client-window { min-width:0; border:1px solid #000; border-left:0; position:relative; padding-left:16px; }
+.ps-client-window::before { content:''; position:absolute; top:-1px; bottom:-1px; left:0; width:16px; background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 6px); }
+.ps-client-track { display:flex; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scrollbar-width:none; }
+.ps-client-track::-webkit-scrollbar { display:none; }
+.ps .ps-client-track:focus-visible { outline-offset:-4px; }
+.ps-client-card { flex:0 0 100%; min-width:0; scroll-snap-align:start; scroll-snap-stop:always; padding:30px 36px; min-height:244px; display:flex; flex-direction:column; justify-content:center; }
+.ps-client-card .mf-client-review { margin:0; padding:0; border:0; }
+.ps .ps-client-card .mf-client-review p { font-family:'Instrument Serif',Georgia,serif; font-size:clamp(26px,2.5vw,35px); line-height:1.22; letter-spacing:-.015em; text-wrap:pretty; }
+.ps-client-card .mf-client-review cite { font-size:10px; line-height:1.6; margin-top:20px; font-style:normal; }
+.ps-client-card .mf-client-review cite::before { content:''; display:inline-block; width:20px; height:1px; background:currentColor; margin-right:10px; vertical-align:middle; }
+.ps .ps-client-last p { font-family:'Instrument Serif',Georgia,serif; font-size:clamp(30px,3vw,42px); line-height:1.1; }
+.ps-client-last .mf-link { align-self:flex-start; font-size:12px; min-height:44px; margin-top:20px; }
+@media(max-width:767px) {
+  .ps-client-carousel { padding:26px 0 32px; }
+  .ps-client-layout { grid-template-columns:1fr; gap:22px; }
+  .ps-client-intro { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .ps .ps-client-intro h2 { font-size:34px; }
+  .ps-client-controls { margin-top:0; gap:6px; }
+  .ps-client-count { margin-left:4px; }
+  .ps-client-card { padding:24px; min-height:250px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ps-client-controls button svg { transition:none; }
+  .ps-client-track { scroll-behavior:auto; }
+}

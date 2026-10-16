@@ -1,0 +1,29 @@
+.mf-services-layout{padding-top:32px;padding-bottom:64px}
+.mf-services-search{margin:0 0 32px;max-width:320px}
+.mf-services-search label{font-size:11px;color:#555}
+.mf-services-search input{display:block;width:100%;border:0;border-bottom:1px solid #aaa;border-radius:0;background:transparent;padding:12px 0;font-size:13px}
+.mf-services-results{min-width:0}
+.mf .mf-services-title{font-family:'Archivo',sans-serif;font-size:20px;letter-spacing:-.02em;margin-bottom:12px}
+.mf-services-intro{color:#666;font-size:13px;margin-bottom:24px!important}
+.mf-services-subgroup+.mf-services-subgroup{margin-top:32px}
+.mf .mf-services-subgroup h3{font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px}
+.mf-services-columns{display:grid;grid-template-columns:minmax(0,1fr) 68px 58px 16px;gap:16px;padding-bottom:12px;color:#777;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.mf-services-columns span:not(:first-child){text-align:right}
+.mf .mf-service-detail{border-top:1px solid #ddd}
+.mf .mf-service-detail:last-child{border-bottom:1px solid #ddd}
+.mf .mf-service-detail summary{display:grid;grid-template-columns:minmax(0,1fr) 68px 58px 16px;align-items:center;gap:16px;padding:20px 0;font-size:14px;line-height:1.5}
+.mf-service-detail summary::-webkit-details-marker{display:none}
+.mf .mf-service-detail summary:after{font-size:17px;color:#777;text-align:right}
+.mf-service-detail summary:hover .mf-service-name{text-decoration:underline;text-underline-offset:4px}
+.mf-service-duration{color:#666;text-align:right;font-size:12px;white-space:nowrap}
+.mf-service-cost{text-align:right;font-variant-numeric:tabular-nums}
+.mf .mf-service-detail p{padding:0 45px 24px 0;font-size:13px;line-height:1.8;max-width:550px}
+.mf-services-results .mf-intimate-guide{margin:32px 0 0;padding:0;border-color:#ddd}
+.mf-services-results .mf-intimate-guide>summary{font-size:13px;padding:20px 0}
+.mf-services-results .mf-intimate-guide[open]{padding-bottom:24px}
+.mf-services-empty{padding:26px 0 45px;border-top:1px solid #ddd}
+.mf .mf-services-empty h3{font-size:20px;margin-bottom:10px}
+.mf-services-empty p{font-size:13px;color:#666}
+.mf-services-reset{background:none;border:0;border-bottom:1px solid;padding:0 0 3px;margin-top:20px;font-size:13px}
+@media(max-width:767px){.mf-services-layout{padding-top:24px;padding-bottom:48px}.mf-services-search{margin-bottom:24px}.mf-services-subgroup+.mf-services-subgroup{margin-top:24px}.mf-services-results .mf-intimate-guide{margin-top:24px}}
+@media(max-width:767px){.mf-services-search{max-width:none}.mf-services-intro{margin-bottom:24px!important}.mf-services-columns,.mf .mf-service-detail summary{grid-template-columns:minmax(0,1fr) 48px 45px 12px;gap:10px}.mf .mf-service-detail summary{font-size:13px;padding:18px 0}.mf-service-duration{font-size:11px}.mf .mf-service-detail p{padding-right:12px}}

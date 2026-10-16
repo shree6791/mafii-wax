@@ -1,0 +1,55 @@
+.mafii-refined { --ink:#171717; --paper:#fafafa; --rule:#d4d4d4; }
+.mafii-refined .mf { display:flex; flex-direction:column; min-height:100dvh; }
+.mafii-refined .mf > main { flex:1 0 auto; }
+.mafii-refined .mf > .mf-header,.mafii-refined .mf > .mf-footer { flex-shrink:0; }
+.mafii-refined .mf-book { justify-content:center; text-align:center; }
+.mafii-refined .mf-footer nav>a:last-child { justify-self:start; text-align:center; }
+.mafii-refined.refined-inner .mf em { font-style:normal; }
+.mafii-refined.refined-inner .mf > main { padding:42px 0 56px; }
+.mafii-refined.refined-inner .mf > main > .mf-wrap { width:calc(100% - 80px); max-width:1040px; margin-inline:auto; }
+.mafii-refined.refined-inner .mf-compact-head { display:block; padding:0 0 25px; margin:0 0 30px; border-bottom:1px solid var(--rule); }
+.mafii-refined.refined-inner .mf-compact-head h1 { display:flex; align-items:center; gap:20px; font-size:52px; line-height:1.08; letter-spacing:-.035em; margin:0; }
+.mafii-refined.refined-inner .mf-compact-head h1::before { content:""; flex:none; width:13px; height:38px; background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px); }
+.mafii-refined.refined-inner .mf-compact-head>p { max-width:590px; margin:14px 0 0 33px; color:#505050; font-size:15px; line-height:1.7; }
+.mafii-refined.refined-inner .mf-stripes { display:none; }
+.mafii-refined.refined-inner .mf-faq-tabs { display:flex; flex-wrap:wrap; gap:0; border-bottom:1px solid var(--rule); margin:0 0 28px; }
+.mafii-refined.refined-inner .mf-faq-tabs button { border:0; border-bottom:2px solid transparent; background:transparent; color:#555; padding:14px 18px; min-height:48px; font-size:12px; }
+.mafii-refined.refined-inner .mf-faq-tabs button[aria-selected=true] { background:var(--ink); color:var(--paper); border-bottom-color:var(--ink); }
+.mafii-refined.refined-inner .mf-faq-tabs button:hover:not([aria-selected=true]) { background:#ededed; color:var(--ink); }
+.mafii-services-compact .mafii-refined.refined-inner .mf > main > .mf-wrap { max-width:820px; }
+.mafii-refined.refined-inner .mf-services-layout { padding:0; }
+.mafii-refined.refined-inner .mf-services-title,.mafii-refined.refined-inner .mf-faq-group h2 { font-family:'Instrument Serif',Georgia,serif; font-size:32px; font-weight:400; line-height:1.15; margin-bottom:12px; }
+.mafii-refined.refined-inner .mf-service-detail summary { padding:15px 0; min-height:52px; }
+.mafii-refined.refined-inner .mf-service-duration,.mafii-refined.refined-inner .mf-service-cost { font-variant-numeric:tabular-nums; }
+.mafii-faq-compact .mafii-refined.refined-inner .mf > main > .mf-wrap { max-width:820px; }
+.mafii-refined.refined-inner .mf-faq-groups { padding:0; margin-block:0; min-height:320px; }
+.mafii-refined.refined-inner .mf-faq-group summary { font-size:14px; padding:20px 0; }
+.mafii-refined.refined-inner .mf-faq-group details p { font-size:14px; line-height:1.8; max-width:680px; }
+.mafii-refined.refined-inner .mf-about-layout { grid-template-columns:.9fr 1.1fr; gap:56px; padding:0; margin:0; align-items:start; }
+.mafii-refined.refined-inner .mf-about-photo { max-width:none; margin:0; }
+.mafii-refined.refined-inner .mf-about-photo img { width:100%; height:370px; object-fit:cover; object-position:center 53%; }
+.mafii-refined.refined-inner .mf-about-photo figcaption { font-size:10px; margin-top:12px; color:#666; }
+.mafii-refined.refined-inner .mf-about-copy h2 { font-size:38px; line-height:1.12; margin:0; }
+.mafii-refined.refined-inner .mf-about-copy p { font-size:15px; line-height:1.8; color:#505050; margin-top:20px; }
+.mafii-refined.refined-inner .mf-contact-layout { grid-template-columns:.85fr 1.15fr; padding:0; margin:0; gap:64px; align-items:start; }
+.mafii-refined.refined-inner .mf-contact-block h2 { font-family:'Instrument Serif',Georgia,serif; font-size:28px; letter-spacing:-.025em; margin-bottom:16px; }
+.mafii-refined.refined-inner .mf-contact-block h2 small { font-family:'Archivo',sans-serif; letter-spacing:0; }
+.mafii-refined.refined-inner .mf-contact-block { padding:24px 0; }
+.mafii-refined.refined-inner .mf-contact-block:first-child { padding-top:0; }
+.mafii-refined.refined-inner .mf-contact-map iframe { height:270px; filter:grayscale(1); }
+.mafii-refined.refined-inner .mf-contact-map address { font-style:normal; font-size:15px; line-height:1.8; margin-bottom:22px; }
+.mafii-refined.refined-inner .mf-contact-map address strong { display:block; font-weight:500; }
+@media(max-width:767px) {
+ .mafii-refined.refined-inner .mf > main { padding:28px 0 36px; }
+ .mafii-refined.refined-inner .mf > main > .mf-wrap { width:calc(100% - 40px); }
+ .mafii-refined.refined-inner .mf-compact-head { margin-bottom:24px; padding-bottom:22px; }
+ .mafii-refined.refined-inner .mf-compact-head h1 { font-size:40px; gap:14px; }
+ .mafii-refined.refined-inner .mf-compact-head h1::before { height:31px; width:10px; }
+ .mafii-refined.refined-inner .mf-compact-head>p { margin-left:24px; font-size:14px; }
+ .mafii-refined.refined-inner .mf-faq-tabs button { padding:12px; font-size:11px; }
+ .mafii-refined.refined-inner .mf-services-search { max-width:none; }
+ .mafii-refined.refined-inner .mf-about-layout,.mafii-refined.refined-inner .mf-contact-layout { grid-template-columns:1fr; gap:28px; }
+ .mafii-refined.refined-inner .mf-about-photo img { height:310px; }
+ .mafii-refined.refined-inner .mf-about-copy h2 { font-size:34px; }
+ .mafii-refined.refined-inner .mf-contact-map iframe { height:260px; }
+}

@@ -1,0 +1,99 @@
+/* The striped edge is a binding: portrait, studio and client words share one rhythm. */
+.mafii-refined { --ink:#171717; --paper:#fafafa; --rule:#d4d4d4; }
+.mafii-refined .mf,.mafii-refined .ps { background:var(--paper);color:var(--ink); }
+.mafii-refined .mf-wrap,.mafii-refined .ps-wrap { width:min(1160px,calc(100% - 96px)); }
+.mafii-refined .mf-header { background:var(--paper);border-color:var(--rule); }
+.mafii-refined .mf-nav { min-height:94px; }
+.mafii-refined .mf-brand { font-size:36px;letter-spacing:-2px; }
+.mafii-refined .mf-brand small { font-size:8px;letter-spacing:2.7px; }
+.mafii-refined .mf-navlinks { gap:30px; }
+.mafii-refined .mf-book { background:var(--ink);border-color:var(--ink);padding:14px 18px;gap:24px;font-size:11px; }
+.mafii-refined .ps h1,.mafii-refined .ps h2 { font-family:'Instrument Serif',Georgia,serif;font-style:normal;font-weight:400; }
+.mafii-refined .ps em { font-style:normal; }
+.mafii-refined .ps-label { font-size:10px;letter-spacing:.14em;line-height:1.5;font-weight:500; }
+.mafii-refined .ps-hero { padding-top:36px; }
+.mafii-refined .refined-hero-layout { display:grid;grid-template-columns:1fr 1fr;min-height:500px; }
+.mafii-refined .refined-hero-copy { display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:32px 55px 32px 0; }
+.mafii-refined .ps h1 { font-size:clamp(76px,8.8vw,118px);line-height:.94;letter-spacing:-.035em;margin:32px 0 25px; }
+.mafii-refined .ps-hero-intro { max-width:310px;padding:0; }
+.mafii-refined .ps-hero-intro p { font-size:14px;line-height:1.8;margin-bottom:25px;color:#505050; }
+.mafii-refined .refined-hero-photo { position:relative;min-width:0;background:#171717;padding-left:32px; }
+.mafii-refined .refined-hero-photo::before { content:'';position:absolute;left:0;top:0;bottom:0;width:32px;background:repeating-linear-gradient(90deg,#171717 0 4px,#fafafa 4px 8px);border-right:8px solid #fafafa; }
+.mafii-refined .refined-hero-photo img { width:100%;height:100%;max-height:535px;display:block;object-fit:cover;object-position:50% 43%;filter:grayscale(1); }
+.mafii-refined .ps-hero-foot { padding:21px 0 25px;font-size:9px;letter-spacing:.1em;border-bottom:1px solid var(--rule); }
+.mafii-refined .ps-specialist { padding:50px 0;background:var(--ink);color:#fff; }
+.mafii-refined .home-studio { margin:0;grid-template-columns:1fr 1fr;gap:64px; }
+.mafii-refined .refined-studio-photos { display:grid;grid-template-columns:1.35fr 1fr;gap:12px;align-items:start; }
+.mafii-refined .home-studio figure { max-width:none; }
+.mafii-refined .home-studio img { height:292px;max-height:none;object-position:50% 58%; }
+.mafii-refined .home-studio .refined-detail { padding-top:42px; }
+.mafii-refined .home-studio .refined-detail img { height:250px; }
+.mafii-refined .home-studio figcaption { font-size:9px;letter-spacing:.04em;color:#bbb; }
+.mafii-refined .home-studio h2 { font-size:clamp(36px,3.8vw,50px);margin:19px 0 20px;line-height:1.05; }
+.mafii-refined .ps-specialist p:not(.ps-label) { font-size:13px;line-height:1.8;color:#ccc;max-width:365px; }
+.mafii-refined .mf-link { font-size:11px;gap:24px;margin-top:22px; }
+.mafii-refined .ps-services { padding:55px 0 48px; }
+.mafii-refined .ps-section-top { margin-bottom:26px;align-items:center; }
+.mafii-refined .ps h2 { font-size:clamp(38px,4vw,52px); }
+.mafii-refined .home-service-layout { grid-template-columns:1fr 1.25fr;gap:50px; }
+.mafii-refined .home-service-layout figure { height:278px; }
+.mafii-refined .home-service-layout figure img { object-position:center 43%; }
+.mafii-refined .home-service-row { padding:22px 0;gap:22px;border-color:var(--rule); }
+.mafii-refined .home-service-row h3 { font-size:20px;letter-spacing:-.025em; }
+.mafii-refined .home-service-row p { font-size:12px;margin-top:5px; }
+.mafii-refined .home-service-row>span { font-size:10px; }
+.mafii-refined .home-service-row svg { width:17px; }
+.mafii-refined .ps-client-carousel { background:#eeeeee;border-top:0;padding:34px 0; }
+.mafii-refined .ps-client-layout { grid-template-columns:1fr 1.5fr;gap:48px; }
+.mafii-refined .ps .ps-client-intro h2 { font-size:37px;max-width:240px; }
+.mafii-refined .ps-client-window { border:0;padding-left:24px; }
+.mafii-refined .ps-client-window::before { top:0;bottom:0;width:16px;background:repeating-linear-gradient(90deg,#171717 0 2px,#eeeeee 2px 5px); }
+.mafii-refined .ps-client-card { min-height:200px;padding:18px 26px; }
+.mafii-refined .ps .ps-client-card .mf-client-review p { font-size:28px;line-height:1.2; }
+.mafii-refined .ps-client-controls { margin-top:23px; }
+.mafii-refined .ps-client-controls button { width:44px;height:44px;background:transparent;border-color:#aaa; }
+.mafii-refined .mf-footer { background:#171717;padding:40px 0 24px; }
+.mafii-refined .mf-footer-grid { gap:35px; }
+.mafii-refined .mf-fine { margin-top:28px; }
+@media (max-width:900px) {
+ .mafii-refined .mf-wrap,.mafii-refined .ps-wrap { width:calc(100% - 48px); }
+ .mafii-refined .refined-hero-copy { padding-right:25px; }
+ .mafii-refined .refined-hero-layout { min-height:450px; }
+ .mafii-refined .home-studio { gap:32px; }
+ .mafii-refined .mf-navlinks { gap:18px; }
+}
+@media (max-width:767px) {
+ .mafii-refined .mf-wrap,.mafii-refined .ps-wrap { width:calc(100% - 40px); }
+ .mafii-refined .mf-nav { min-height:80px; }
+ .mafii-refined .mf-brand { font-size:30px; }
+ .mafii-refined .mf-mobile-book .mf-book { padding:11px 10px;font-size:10px;gap:10px; }
+ .mafii-refined .ps-hero { padding-top:0; }
+ .mafii-refined .refined-hero-layout { grid-template-columns:1fr; }
+ .mafii-refined .refined-hero-copy { padding:32px 0; }
+ .mafii-refined .ps h1 { font-size:80px;margin:23px 0 20px; }
+ .mafii-refined .ps-hero-intro { max-width:350px; }
+ .mafii-refined .refined-hero-photo { height:390px;padding-left:24px; }
+ .mafii-refined .refined-hero-photo::before { width:24px; }
+ .mafii-refined .refined-hero-photo img { object-position:50% 38%; }
+ .mafii-refined .ps-hero-foot { font-size:8px;line-height:1.8;padding:16px 0 21px; }
+ .mafii-refined .ps-hero-foot span { max-width:100%; }
+ .mafii-refined .ps-specialist { padding-top:32px; }
+ .mafii-refined .home-studio { grid-template-columns:1fr;gap:28px; }
+ .mafii-refined .home-studio img { height:260px; }
+ .mafii-refined .home-studio .refined-detail img { height:218px; }
+ .mafii-refined .home-studio h2 { font-size:40px; }
+ .mafii-refined .ps-services { padding:35px 0; }
+ .mafii-refined .ps-section-top { display:flex;padding-top:24px; }
+ .mafii-refined .ps-section-top .ps-label { display:none; }
+ .mafii-refined .home-service-layout { grid-template-columns:1fr;gap:22px; }
+ .mafii-refined .home-service-layout figure { height:220px; }
+ .mafii-refined .ps-client-layout { grid-template-columns:1fr;gap:22px; }
+ .mafii-refined .ps .ps-client-intro h2 { font-size:34px;max-width:190px; }
+ .mafii-refined .ps-client-controls { margin:0; }
+ .mafii-refined .ps-client-card { min-height:215px;padding:15px 16px; }
+ .mafii-refined .ps .ps-client-card .mf-client-review p { font-size:26px; }
+ .mafii-refined .mf-footer-grid { gap:28px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .mafii-refined *, .mafii-refined *::before, .mafii-refined *::after { transition:none!important;animation:none!important;scroll-behavior:auto!important; }
+}
