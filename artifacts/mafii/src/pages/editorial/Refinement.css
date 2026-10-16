@@ -54,7 +54,6 @@
 .mafii-refined .ps-client-controls button { width:44px;height:44px;background:transparent;border-color:#aaa; }
 .mafii-refined .mf-footer { background:#171717;padding:40px 0 24px; }
 .mafii-refined .mf-footer-grid { gap:35px; }
-.mafii-refined .mf-fine { margin-top:28px; }
 @media (max-width:900px) {
  .mafii-refined .mf-wrap,.mafii-refined .ps-wrap { width:calc(100% - 48px); }
  .mafii-refined .refined-hero-copy { padding-right:25px; }

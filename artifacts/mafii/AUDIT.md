@@ -1,4 +1,17 @@
-# Website maintenance audit — October 15, 2026
+# Website maintenance audit
+
+## Repository cleanup — October 16, 2026
+
+- Added booking-click tracking (GA4 and Meta Pixel, enabled by `VITE_GA4_ID` / `VITE_META_PIXEL_ID`), UTM carry-through to GlossGenius, BeautySalon structured data, canonical URL, share image and sitemap. The production domain is assumed to be mafiiwaxstudio.com (the studio's email domain); confirm before launch.
+- Removed the design-canvas sandbox (`artifacts/mockup-sandbox`): it held out-of-date copies of the site and earlier concepts. Recoverable from git history.
+- Removed the unused UI component kit, hooks, `cn` helper, shadcn config and 48 unused packages from the website.
+- Removed the generated React API client (`lib/api-client-react`); its only consumer was the retired request form. The backend API, Zod schemas, database schema and request data are unchanged.
+- Removed CSS rules for classes no page renders, the unused elevation utilities and animations, and the canvas-preview code paths.
+- Removed four unused images from the site and unused photo candidates from `attached_assets`; reviewed sources for the studio photos remain.
+- Stopped tracking build output (`dist/`, `*.tsbuildinfo`); packages export source, so builds regenerate them.
+- Updated the API's legacy service list with verified prices.
+
+## Initial audit — October 15, 2026
 
 ## Fixed
 

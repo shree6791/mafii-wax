@@ -4,9 +4,9 @@ Multipage website for an inclusive waxing studio in Mountain View, California, w
 
 ## Website maintenance
 
-- The approved canvas pages re-export the live website's editorial components. Keep these previews tied to the website so content, navigation and fixes do not drift. Earlier exploratory designs remain independent.
-- Website pages live in `artifacts/mafii/src/pages/editorial`. Route and asset helpers distinguish the website from `/__mockup/` previews.
-- When adding an image to these shared pages, provide it in both artifacts' public image directories. Do not copy page implementations back into the sandbox.
+- Website pages live in `artifacts/mafii/src/pages/editorial`; route and asset helpers live in `artifacts/mafii/src/lib`.
+- The design-canvas sandbox (`artifacts/mockup-sandbox`) was removed in October 2026; its exploratory designs remain in git history.
+- `docs/` holds the GitHub Pages preview build (https://shree6791.github.io/mafii-wax/), marked noindex. Rebuild it after site changes with `pnpm --filter @workspace/mafii run build:pages`.
 - The old request-form frontend has been retired. Historical request records and the backend API are preserved; do not delete customer data as part of cleanup.
 
 ## Run & Operate
@@ -14,7 +14,7 @@ Multipage website for an inclusive waxing studio in Mountain View, California, w
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
+- `pnpm --filter @workspace/api-spec run codegen` — regenerate Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
 
