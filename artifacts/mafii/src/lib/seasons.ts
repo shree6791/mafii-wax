@@ -2,7 +2,7 @@
 // date in Pacific time, so it switches on and off each year without edits.
 // Gift seasons are listed first so they win where windows overlap.
 // Specific holidays come before broad seasons for the same reason.
-// Preview any season with ?season=valentines|mothers|fathers|holidays|july4|laborday|summer|newyear.
+// Preview any season with ?season=valentines|mothers|fathers|holidays|memorialday|july4|laborday|summer|newyear.
 
 export type Season = { id: string; message: string; action: "gift" | "book" };
 
@@ -25,6 +25,11 @@ function nthWeekday(y: number, m: number, weekday: number, n: number): Ymd {
 }
 const nthSunday = (y: number, m: number, n: number) => nthWeekday(y, m, 0, n);
 const laborDay = (y: number) => nthWeekday(y, 9, 1, 1);
+/** Memorial Day: the last Monday of May. */
+function memorialDay(y: number): Ymd {
+  const fifth = nthWeekday(y, 5, 1, 5);
+  return fifth.d <= 31 ? fifth : nthWeekday(y, 5, 1, 4);
+}
 
 function within(today: Ymd, start: Ymd, end: Ymd) {
   const t = dayNumber(today);
@@ -55,6 +60,12 @@ const seasons: (Season & { window: (y: number) => [Ymd, Ymd] })[] = [
     message: "This holiday season, give the gift of smooth skin.",
     action: "gift",
     window: y => [{ y, m: 11, d: 20 }, { y, m: 12, d: 24 }],
+  },
+  {
+    id: "memorialday",
+    message: "Memorial Day weekend is the start of summer. Get beach ready.",
+    action: "book",
+    window: y => { const day = memorialDay(y); return [{ ...day, d: day.d - 10 }, day]; },
   },
   {
     id: "july4",
