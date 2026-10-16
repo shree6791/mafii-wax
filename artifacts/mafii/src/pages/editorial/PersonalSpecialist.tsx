@@ -11,14 +11,14 @@ export function PersonalSpecialist() {
         <h1>Waxing,<br />refined.</h1>
         <div className="ps-hero-intro"><p>Leave smooth, confident and cared for. Brazilian and full-body waxing by one expert, in a private studio in Mountain View.</p><Book placement="home_hero" /></div>
         </div>
-        <figure className="refined-hero-photo"><img src={image("portrait-3973709.webp")} alt="Black and white stock portrait of a woman looking over her shoulder" fetchPriority="high" /></figure>
+        <figure className="refined-hero-photo"><img src={image("studio-interior.jpg")} alt="Inside MAFII’s private studio: lit shelves, an arched black mirror and orchids" fetchPriority="high" /></figure>
       </div>
       <div className="ps-hero-foot"><span>Rated 5.0 on Google · Women-owned · All genders welcome</span></div>
     </section>
     <section className="ps-dark ps-specialist"><div className="ps-wrap">
       <div className="home-studio">
         <div className="refined-studio-photos">
-        <figure><img src={image("studio-interior.jpg")} alt="Inside MAFII’s studio, with illuminated shelves and a black-framed mirror" width="577" height="1024" loading="lazy" /><figcaption>MAFII · Studio 21, Mountain View</figcaption></figure>
+        <figure><img src={image("studio-entrance.jpg")} alt="MAFII Wax Studio’s branded door: Always inclusive and intentional" width="800" height="1067" loading="lazy" /><figcaption>MAFII · Studio 21, Mountain View</figcaption></figure>
         <figure className="refined-detail"><img src={image("studio-detail.jpg")} alt="Orchid and mirrored details inside MAFII’s studio" width="577" height="1024" loading="lazy" /></figure>
         </div>
         <div><p className="ps-label">Your specialist</p><h2>The same expert hands, every visit.</h2><p>No front desk and no rotating staff. With over seven years of experience, MAFII’s owner performs every service herself, so you’re in practiced hands from your first appointment onward.</p><a className="mf-link" href={page("About")}>About MAFII <ArrowUpRight /></a></div>

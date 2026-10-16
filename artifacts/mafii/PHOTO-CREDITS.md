@@ -4,7 +4,6 @@ The site combines licensed Pexels stock photography with real studio photographs
 
 | File | Source | Author |
 | --- | --- | --- |
-| public/images/portrait-3973709.webp | https://www.pexels.com/photo/3973709/ | Dellon Thomas |
 | public/images/beauty-3373716.webp | https://www.pexels.com/photo/3373716/ | Shiny Diamond |
 
 License: Pexels License (https://www.pexels.com/license/) — free for commercial website use; modification allowed; attribution not required but given. Identifiable people may not be shown as endorsing a product or business.
@@ -21,4 +20,4 @@ Discovery source: https://magicpin.com/usa/Mountain-View/Mountain-View/Other/Maf
 | --- | --- | --- |
 | public/images/studio-interior.jpg | attached_assets/image_search/mafii-interior-1.jpg | Studio shelving and mirror |
 | public/images/studio-detail.jpg | attached_assets/image_search/mafii-interior-2.jpg | Orchids and interior décor |
-| (not currently on the site) | attached_assets/image_search/mafii-additional-1.jpg | Branded entrance door |
+| public/images/studio-entrance.jpg | attached_assets/image_search/mafii-additional-1.jpg | Branded entrance door |
