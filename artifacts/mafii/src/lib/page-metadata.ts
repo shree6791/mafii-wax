@@ -4,8 +4,8 @@ export const pageMetadata: Record<string, { title: string; description: string }
     description: "Beautifully smooth skin, with personal care. Discover MAFII, a women-owned, independent waxing studio inside Sola Salon Studios in Mountain View.",
   },
   Services: {
-    title: "Waxing Services & Prices | MAFII Mountain View",
-    description: "Explore Brazilian, bikini, body and facial waxing prices and durations at MAFII. Choose your service and book an available appointment through GlossGenius.",
+    title: "Services & Prices | MAFII Wax Studio, Mountain View",
+    description: "Brazilian, bikini, body and facial waxing with clear prices. See exactly what each service covers and book in minutes.",
   },
   About: {
     title: "About Our Independent Waxing Studio | MAFII",
@@ -13,7 +13,7 @@ export const pageMetadata: Record<string, { title: string; description: string }
   },
   FirstVisit: {
     title: "FAQ: Appointments, Preparation & Aftercare | MAFII",
-    description: "Find answers about choosing your MAFII appointment, preparation, waxing discomfort, aftercare, cancellations and late arrivals.",
+    description: "How to prepare for your wax, what to expect, aftercare and studio policies at MAFII in Mountain View.",
   },
   Visit: {
     title: "Contact | MAFII Wax Studio",

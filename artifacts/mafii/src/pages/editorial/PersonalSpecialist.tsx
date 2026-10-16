@@ -9,11 +9,11 @@ export function PersonalSpecialist() {
       <div className="refined-hero-layout">
         <div className="refined-hero-copy">
         <h1>Waxing,<br />refined.</h1>
-        <div className="ps-hero-intro"><p>Smooth skin. Expert attention. Brazilian and full-body waxing in a private, owner-operated studio.</p><Book placement="home_hero" /></div>
+        <div className="ps-hero-intro"><p>Leave smooth, confident and cared for. Brazilian and full-body waxing by one expert, in a private studio in Mountain View.</p><Book placement="home_hero" /></div>
         </div>
         <figure className="refined-hero-photo"><img src={image("portrait-3973709.webp")} alt="Black and white stock portrait of a woman looking over her shoulder" fetchPriority="high" /></figure>
       </div>
-      <div className="ps-hero-foot"><span>Women-owned. Independent. All genders welcome.</span></div>
+      <div className="ps-hero-foot"><span>Rated 5.0 on Google · Women-owned · All genders welcome</span></div>
     </section>
     <section className="ps-dark ps-specialist"><div className="ps-wrap">
       <div className="home-studio">
@@ -21,17 +21,17 @@ export function PersonalSpecialist() {
         <figure><img src={image("studio-interior.jpg")} alt="Inside MAFII’s studio, with illuminated shelves and a black-framed mirror" width="577" height="1024" loading="lazy" /><figcaption>MAFII · Studio 21, Mountain View</figcaption></figure>
         <figure className="refined-detail"><img src={image("studio-detail.jpg")} alt="Orchid and mirrored details inside MAFII’s studio" width="577" height="1024" loading="lazy" /></figure>
         </div>
-        <div><p className="ps-label">The studio</p><h2>Independent studio.<br />Experienced care.</h2><p>With over seven years of waxing experience, MAFII’s owner brings practiced technique and personal attention to every appointment.</p><a className="mf-link" href={page("About")}>About MAFII <ArrowUpRight /></a></div>
+        <div><p className="ps-label">Your specialist</p><h2>The same expert hands, every visit.</h2><p>No front desk and no rotating staff. With over seven years of experience, MAFII’s owner performs every service herself, so you’re in practiced hands from your first appointment onward.</p><a className="mf-link" href={page("About")}>About MAFII <ArrowUpRight /></a></div>
       </div>
     </div></section>
     <section className="ps-wrap ps-services">
-      <div className="ps-section-top"><h2>Waxing services.</h2></div>
+      <div className="ps-section-top"><h2>Smooth, head to toe.</h2></div>
       <div className="home-service-layout">
         <figure className="ps-photo"><img src={image("beauty-3373716.webp")} alt="Stock close-up of an eye and brow" loading="lazy" /></figure>
         <div>{[
-          ["01", "Brazilian & Bikini", "Choose the coverage that suits you.", "Brazilian"],
-          ["02", "Body Waxing", "Legs, arms, underarms and more.", "Services?category=Body"],
-          ["03", "Face & Brows", "Brow shaping and facial waxing.", "Services?category=Face"],
+          ["01", "Brazilian & Bikini", "From a tidy bikini line to fully bare. Your call.", "Brazilian"],
+          ["02", "Body Waxing", "Legs, arms, back and more, smooth for weeks.", "Services?category=Body"],
+          ["03", "Face & Brows", "Shaped brows and a smooth, polished face.", "Services?category=Face"],
         ].map(([number, title, text, destination]) => <a className="home-service-row" href={page(destination)} key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpRight /></a>)}</div>
       </div>
     </section>

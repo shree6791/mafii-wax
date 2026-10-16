@@ -3,21 +3,21 @@ import { SiteShell } from "./SiteShell";
 
 const groups = [
   { title: "Choosing your appointment", questions: [
-    ["Which appointment should I choose?", "Select the area you want waxed. If you’ve never had a Brazilian or bikini service with MAFII, choose the corresponding first-time appointment on GlossGenius. If the coverage or booking label is unclear, contact the studio before booking."],
-    ["Are all genders welcome?", "Yes. MAFII provides Brazilian and full-body waxing for all genders. The booking menu lists coverage and service options; contact the studio if you’re unsure which to choose."],
-    ["How do I book an appointment?", "Select Book Appointment to open MAFII’s booking menu on GlossGenius. Choose your service and an available time, then follow the steps to confirm your appointment."]
+    ["Which appointment should I choose?", "Pick the area you’d like waxed. For your first Brazilian or bikini service at MAFII, choose the first-visit option; it includes extra time. Not sure which one fits? Call 650.930.6516 before booking."],
+    ["Are all genders welcome?", "Yes, always. MAFII is women-owned and welcomes every gender, with a dedicated MAFII Man menu."],
+    ["How do I book an appointment?", "Tap Book Appointment, choose your service and a time that suits you, and confirm on GlossGenius."]
   ] },
   { title: "Before your visit", questions: [
-    ["How much hair growth do I need?", "MAFII’s first-time Brazilian services ask for 3–4 weeks of hair growth. Avoid shaving just before your appointment. For other areas, ask the studio about preparation for your selected service."],
-    ["What should I tell my specialist?", "Mention skin sensitivity, recent skin treatments, medications and products you use on the area. Ask the studio whether waxing is appropriate before booking if you have concerns. Don’t stop prescribed medication without guidance from your clinician."]
+    ["How much hair growth do I need?", "About 3–4 weeks of growth, roughly the length of a grain of rice, gives the smoothest result. Skip shaving beforehand. For other areas, just ask."],
+    ["What should I tell my specialist?", "Mention sensitive skin, recent treatments or peels, and any medications or products you use on the area. If you’re unsure whether waxing suits you, ask before booking. Never stop a prescribed medication without your clinician’s advice."]
   ] },
   { title: "During your appointment", questions: [
-    ["What can I expect?", "MAFII’s owner is your waxing specialist. You can discuss your coverage preferences and ask questions about your service. The area being waxed and the time listed depend on the appointment you select; check those details in the booking menu."],
-    ["Will waxing hurt?", "Waxing can cause temporary discomfort. Everyone experiences it differently; tell your specialist how you’re feeling and ask questions about the process."]
+    ["What can I expect?", "A private studio and one specialist. MAFII’s owner does every service herself, so you can talk through coverage and comfort with the person doing your wax."],
+    ["Will waxing hurt?", "There’s a quick sting, and everyone feels it differently. Many clients find it eases with regular visits. Tell your specialist how you’re doing at any point."]
   ] },
   { title: "After your wax", questions: [
-    ["How can I care for freshly waxed skin?", "As general guidance, treat sensitive skin gently: keep the area clean, avoid rubbing or picking, and avoid heat, friction and fragranced or exfoliating products while the skin feels irritated. Comfortable, loose clothing can help reduce rubbing. This is general information, not a personalized aftercare plan."],
-    ["When can I return to my usual routine?", "Ask your specialist for advice suited to your skin and service, including when to resume exercise, exfoliation and your usual skincare. There is no single schedule that suits everyone. If irritation worsens, persists or concerns you, seek advice from a healthcare professional."]
+    ["How can I care for freshly waxed skin?", "For the first day or two, let your skin settle: keep the area clean, wear loose clothing, and skip heat, friction, scrubs and fragranced products. Your specialist can tailor this to your skin."],
+    ["When can I return to my usual routine?", "Ask your specialist what’s right for your skin and service, including when to resume workouts and exfoliation. If irritation gets worse or doesn’t settle, check in with a healthcare professional."]
   ] }
 ];
 const policies = [
@@ -52,7 +52,7 @@ export function FirstVisit() {
     document.getElementById(`faq-tab-${keys[next]}`)?.focus();
   }
   return <SiteShell active="FirstVisit">
-    <section className="mf-wrap mf-compact-head mf-information-head"><h1>FAQ</h1><p>Preparation, aftercare and studio policies.</p></section>
+    <section className="mf-wrap mf-compact-head mf-information-head"><h1>FAQ</h1><p>Everything to know before your wax, and after.</p></section>
     <section className="mf-wrap mf-section mf-faq-groups">
       <div className="mf-faq-tabs" role="tablist" aria-label="FAQ topics">
         {labels.map((label, index) => <button key={keys[index]} role="tab" id={`faq-tab-${keys[index]}`} aria-selected={active === index} aria-controls={`faq-panel-${keys[index]}`} tabIndex={active === index ? 0 : -1} onClick={() => selectTopic(index)} onKeyDown={event => navigateTabs(event, index)}>{label}</button>)}

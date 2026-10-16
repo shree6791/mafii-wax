@@ -14,8 +14,8 @@ export function IntimateGuide() {
         <div key={name}><h3>{name}</h3><p>{description}</p></div>
       )}
     </div>
-    <p>New to Brazilian or full bikini waxing at MAFII? Select the corresponding first-visit appointment for extra time. Discuss your preferred coverage and any skin concerns with your specialist.</p>
-    <p>MAFII Man options have their own coverage descriptions in the menu below. All genders are welcome.</p>
+    <p>First Brazilian or full bikini at MAFII? Book the first-visit option. It builds in extra time, and you’ll agree on coverage together before you start.</p>
+    <p>MAFII Man services are listed separately below, with their own coverage. Everyone is welcome here.</p>
     <a className="mf-link" href={page("FirstVisit")}>Preparation & aftercare FAQs ↗</a>
   </details>;
 }

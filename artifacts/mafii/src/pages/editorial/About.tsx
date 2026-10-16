@@ -4,7 +4,7 @@ export function About() {
   return <SiteShell active="About">
     <section className="mf-wrap mf-compact-head">
       <h1>About MAFII</h1>
-      <p>Independent, women-owned and welcoming all genders. Personal waxing care in Mountain View.</p>
+      <p>Where precision meets comfort, and every detail is considered. Women-owned and welcoming to all.</p>
     </section>
     <div className="mf-stripes" aria-hidden="true" />
     <section className="mf-wrap mf-section mf-split mf-about-layout">
@@ -15,7 +15,7 @@ export function About() {
       <div className="mf-about-copy">
         <h2>Your specialist.<br />Every visit.</h2>
         <p>With over seven years of waxing experience, including time at European Wax Center, MAFII’s owner brings expert care to Brazilian and full-body waxing in her own black-and-white studio.</p>
-        <p>Here, you speak directly with the person doing your service. Bring your questions, share your coverage preferences and talk about any skin concerns—whether this is your first appointment or part of your regular routine.</p>
+        <p>Here, you talk directly with the person doing your wax. Share how much you’d like removed, ask anything and mention any skin concerns. First appointment or regular routine, you’ll feel comfortable and looked after from start to finish.</p>
       </div>
     </section>
   </SiteShell>;

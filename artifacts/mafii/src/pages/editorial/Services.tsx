@@ -12,10 +12,10 @@ const menu:[string,string,number,string,string][]=[
 ];
 const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 const groups = [
-  {id:"Intimate", title:"Brazilian & Bikini", description:"Bikini line, full bikini and Brazilian waxing."},
-  {id:"Body", title:"Body Waxing", description:"Legs, arms, underarms and individual body areas."},
-  {id:"Face", title:"Face & Brows", description:"Brow shaping and facial waxing."},
-  {id:"Signature", title:"Packages & Add-ons", description:"Full-body appointments, skin add-ons and after-hours reservations."},
+  {id:"Intimate", title:"Brazilian & Bikini", description:"A tidy bikini line, a full bikini or fully bare. Choose the coverage you love."},
+  {id:"Body", title:"Body Waxing", description:"Smooth legs, arms, back and more."},
+  {id:"Face", title:"Face & Brows", description:"Shaped brows and smooth, polished skin."},
+  {id:"Signature", title:"Packages & Add-ons", description:"Smooth from head to toe in one visit, plus skin add-ons and after-hours times."},
 ];
 export function Services(){
 const [category,setCategory]=useState(() => {
@@ -63,7 +63,7 @@ function selectCategory(id: string) {
   setSearch("");
 }
 return <SiteShell active="Services">
-  <section className="mf-wrap mf-compact-head mf-information-head"><h1>Waxing Services</h1><p>Choose an area. Select a service to see coverage and appointment details.</p></section>
+  <section className="mf-wrap mf-compact-head mf-information-head"><h1>Services & Prices</h1><p>Every service, with clear prices. Select one to see exactly what’s covered.</p></section>
   <div className="mf-stripes" aria-hidden="true"/>
   <section className="mf-wrap mf-services-layout" aria-label="Service menu">
     <div className="mf-services-nav">
