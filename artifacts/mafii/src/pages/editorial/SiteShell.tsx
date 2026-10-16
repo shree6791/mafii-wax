@@ -94,7 +94,7 @@ export function PageHead({ label, title, text, book = false }: { label: string; 
 }
 
 export function BookingBand({ placement = "booking_band" }: { placement?: string }) {
-  return <section className="mf-section mf-booking-band">
+  return <section className="mf-dark mf-section">
     <div className="mf-wrap mf-band">
       <div><p className="mf-label">Your next appointment</p><h2 style={{ marginTop: 15 }}>Make time for <em>yourself.</em></h2><p>Choose your service and an available time on GlossGenius.</p></div>
       <Book placement={placement} />

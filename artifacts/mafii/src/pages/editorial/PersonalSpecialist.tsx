@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { SiteShell, Book, BookingBand, page, image } from "./SiteShell";
+import { SiteShell, Book, page, image } from "./SiteShell";
 import "./PersonalSpecialist.css";
 import { ClientCarousel } from "./ClientCarousel";
 
@@ -36,7 +36,6 @@ export function PersonalSpecialist() {
       </div>
     </section>
     <ClientCarousel />
-    <BookingBand placement="home_band" />
   </div></SiteShell>;
 }
 export default PersonalSpecialist;
