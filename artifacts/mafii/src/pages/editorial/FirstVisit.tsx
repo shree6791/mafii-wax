@@ -1,5 +1,5 @@
 import { useState, type KeyboardEvent } from "react";
-import { SiteShell, BookingBand } from "./SiteShell";
+import { SiteShell } from "./SiteShell";
 
 const groups = [
   { title: "Choosing your appointment", questions: [
@@ -59,7 +59,6 @@ export function FirstVisit() {
       </div>
       {topics.map((group, index) => <div role="tabpanel" id={`faq-panel-${keys[index]}`} aria-labelledby={`faq-tab-${keys[index]}`} hidden={active !== index} tabIndex={0} className="mf-faq-group" key={group.title}><h2 id={index === 4 ? "appointment-policies" : undefined}>{group.title}</h2>{group.questions.map(([q,a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>)}
     </section>
-    <BookingBand placement="faq_band" />
   </SiteShell>;
 }
 export default FirstVisit;

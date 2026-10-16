@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<title>MAFII</title>
+<rect width="64" height="64" rx="10" fill="#000"/>
+<path d="M12 49V15l20 17 20-17v34H42V36L32 45 22 36v13Z" fill="#fff"/>
+</svg>

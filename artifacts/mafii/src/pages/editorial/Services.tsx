@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SiteShell, BookingBand } from "./SiteShell";
+import { SiteShell } from "./SiteShell";
 import { intimateServices } from "../../lib/intimate-services";
 import { IntimateGuide } from "./IntimateGuide";
 import "./Services.css";
@@ -116,7 +116,6 @@ return <SiteShell active="Services">
       {(category === "Intimate" || category === "All") && <IntimateGuide />}
     </div>
   </section>
-  <BookingBand placement="services_band" />
 </SiteShell>
 }
 export default Services;
