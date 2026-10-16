@@ -76,3 +76,15 @@
 
 /* Even line lengths in headings, no single-word last lines */
 .mafii-refined .mf h1,.mafii-refined .mf h2,.mafii-refined .mf h3{text-wrap:balance}
+
+/* Contact: 2x2 grid. Row 1: phone/email | address. Row 2: hours | map, tops aligned */
+.mafii-refined.refined-inner .mf-contact-layout{grid-template-columns:.85fr 1.15fr;gap:44px 64px;align-items:start}
+.mafii-refined.refined-inner .mf-contact-layout .mf-contact-block{padding:0;border-top:0}
+.mafii-refined.refined-inner .mf-contact-address address{font-style:normal;font-size:15px;line-height:1.8;margin:0}
+.mafii-refined.refined-inner .mf-contact-address address strong{display:block;font-weight:500}
+.mafii-refined.refined-inner .mf-contact-address .mf-link{margin-top:14px}
+.mafii-refined.refined-inner .mf-contact-hours h2{margin:0 0 12px;line-height:1}
+.mafii-refined.refined-inner .mf-contact-map iframe{height:200px}
+@media (max-width:767px){.mafii-refined.refined-inner .mf-contact-layout{grid-template-columns:1fr;gap:32px}.mafii-refined.refined-inner .mf-contact-map iframe{height:240px}}
+/* About: centre the copy against the photo */
+.mafii-refined.refined-inner .mf-about-layout{align-items:center}
