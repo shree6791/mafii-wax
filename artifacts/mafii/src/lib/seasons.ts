@@ -2,7 +2,7 @@
 // date in Pacific time, so it switches on and off each year without edits.
 // Gift seasons are listed first so they win where windows overlap.
 // Specific holidays come before broad seasons for the same reason.
-// Preview any season with ?season=valentines|mothers|fathers|holidays|memorialday|july4|laborday|summer|newyear.
+// Preview any season with ?season=valentines|mothers|fathers|holidays|memorialday|july4|laborday|halloween|summer|newyear.
 
 export type Season = { id: string; message: string; action: "gift" | "book" };
 
@@ -39,55 +39,61 @@ function within(today: Ymd, start: Ymd, end: Ymd) {
 const seasons: (Season & { window: (y: number) => [Ymd, Ymd] })[] = [
   {
     id: "valentines",
-    message: "Valentine’s Day is coming. Give the gift of smooth skin.",
+    message: "Valentine’s gift idea: smooth, confident skin.",
     action: "gift",
     window: y => [{ y, m: 1, d: 25 }, { y, m: 2, d: 14 }],
   },
   {
     id: "mothers",
-    message: "For Mother’s Day, give her an hour that’s all hers.",
+    message: "Mother’s Day: give her an hour that’s all about her.",
     action: "gift",
     window: y => { const day = nthSunday(y, 5, 2); return [{ ...day, d: day.d - 14 }, day]; },
   },
   {
     id: "fathers",
-    message: "For Father’s Day, give a MAFII Man gift card.",
+    message: "Father’s Day: a MAFII Man gift card he’ll actually use.",
     action: "gift",
     window: y => { const day = nthSunday(y, 6, 3); return [{ ...day, d: day.d - 14 }, day]; },
   },
   {
     id: "holidays",
-    message: "This holiday season, give the gift of smooth skin.",
+    message: "Still shopping? Smooth skin is the easiest gift on your list.",
     action: "gift",
     window: y => [{ y, m: 11, d: 20 }, { y, m: 12, d: 24 }],
   },
   {
     id: "memorialday",
-    message: "Memorial Day weekend is the start of summer. Get beach ready.",
+    message: "Memorial Day plans? Wax 2–3 days before for your smoothest skin.",
     action: "book",
     window: y => { const day = memorialDay(y); return [{ ...day, d: day.d - 10 }, day]; },
   },
   {
     id: "july4",
-    message: "Fourth of July weekend? Get beach ready before the fireworks.",
+    message: "Fourth of July plans? Wax 2–3 days ahead so skin is calm and smooth.",
     action: "book",
     window: y => [{ y, m: 6, d: 25 }, { y, m: 7, d: 4 }],
   },
   {
     id: "laborday",
-    message: "Labor Day weekend is coming. One last beach-ready wax.",
+    message: "Last long weekend of summer? Wax 2–3 days before you go.",
     action: "book",
     window: y => { const day = laborDay(y); return [{ ...day, d: day.d - 10 }, day]; },
   },
   {
+    id: "halloween",
+    message: "Halloween party coming up? Get brows and skin costume-ready.",
+    action: "book",
+    window: y => [{ y, m: 10, d: 20 }, { y, m: 10, d: 31 }],
+  },
+  {
     id: "summer",
-    message: "Summer’s here. Get beach ready.",
+    message: "Beach, pool or vacation? Wax 2–3 days before for smooth, calm skin.",
     action: "book",
     window: y => [{ y, m: 5, d: 15 }, laborDay(y)],
   },
   {
     id: "newyear",
-    message: "Ring in the new year smooth. Book before the holiday rush.",
+    message: "Ring in the new year smooth. Wax 2–3 days before your celebration.",
     action: "book",
     window: y => [{ y, m: 12, d: 26 }, { y, m: 12, d: 31 }],
   },

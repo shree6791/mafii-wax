@@ -49,8 +49,8 @@ export function SiteShell({ children, active = "" }: { children: ReactNode; acti
   return <div className={scope}><div className={`mafii-refined hero-balanced${active ? " refined-inner" : ""}`}><div className="mf">
     <a href="#mf-main" className="mf-skip">Skip to content</a>
     {season && <p className="mf-season" data-season={season.id}>{season.message} {season.action === "gift"
-      ? <GiftCardLink placement={`season_${season.id}`}>Shop gift cards</GiftCardLink>
-      : <a href={bookingUrl(booking, `season_${season.id}`)} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick(`season_${season.id}`)}>Book now</a>}</p>}
+      ? <GiftCardLink placement={`season_${season.id}`}>Buy a gift card</GiftCardLink>
+      : <a href={bookingUrl(booking, `season_${season.id}`)} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick(`season_${season.id}`)}>Book your wax</a>}</p>}
     <header className="mf-header">
       <div className="mf-wrap mf-nav">
         <a className="mf-brand" href={page("PersonalSpecialist")} aria-label="MAFII home">MAFII<small>WAX STUDIO</small></a>
