@@ -21,7 +21,7 @@ export function PersonalSpecialist() {
         <figure><img src={image("studio-entrance.jpg")} alt="MAFII Wax Studio’s branded door: Always inclusive and intentional" width="800" height="1067" loading="lazy" /><figcaption>MAFII · Studio 21, Mountain View</figcaption></figure>
         <figure className="refined-detail"><img src={image("studio-detail.jpg")} alt="Orchid and mirrored details inside MAFII’s studio" width="577" height="1024" loading="lazy" /></figure>
         </div>
-        <div><p className="ps-label">Your specialist</p><h2>The same expert hands, every visit.</h2><p>No front desk and no rotating staff. With over seven years of experience, MAFII’s owner performs every service herself, so you’re in practiced hands from your first appointment onward.</p><a className="mf-link" href={page("About")}>About MAFII <ArrowUpRight /></a></div>
+        <div><p className="ps-label">Your specialist</p><h2>The same expert hands, every visit.</h2><p>No front desk and no rotating staff. With over seven years of experience, MAFII’s owner performs every service herself, so you’re in practiced hands from your first appointment onward.</p><a className="mf-link" href={page("About")}>About MAFII <ArrowUpRight /></a></div>
       </div>
     </div></section>
     <section className="ps-wrap ps-services">

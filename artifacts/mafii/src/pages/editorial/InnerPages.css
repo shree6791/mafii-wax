@@ -73,3 +73,6 @@
   .mafii-refined .mf-footer .mf-footer-nav{display:none}
   .mafii-refined .mf-footer-grid{gap:20px}
 }
+
+/* Even line lengths in headings, no single-word last lines */
+.mafii-refined .mf h1,.mafii-refined .mf h2,.mafii-refined .mf h3{text-wrap:balance}

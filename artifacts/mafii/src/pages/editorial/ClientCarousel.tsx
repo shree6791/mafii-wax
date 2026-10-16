@@ -29,7 +29,7 @@ export function ClientCarousel() {
   return <section className="ps-client-carousel" aria-labelledby="client-words" aria-roledescription="carousel" data-testid="section-client-words">
     <div className="ps-wrap ps-client-layout">
       <div className="ps-client-intro">
-        <h2 id="client-words">In our clients’ <em>words.</em></h2>
+        <h2 id="client-words">In our clients’ <em>words.</em></h2>
         <div className="ps-client-controls">
           <button type="button" aria-label="Previous testimonial card" aria-controls="client-review-track" aria-disabled={active === 0} onClick={() => goTo(active - 1)} data-testid="button-review-previous"><ArrowLeft aria-hidden="true" /></button>
           <button type="button" aria-label="Next testimonial card" aria-controls="client-review-track" aria-disabled={active === 2} onClick={() => goTo(active + 1)} data-testid="button-review-next"><ArrowRight aria-hidden="true" /></button>

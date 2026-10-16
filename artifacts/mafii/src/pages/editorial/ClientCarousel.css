@@ -1,7 +1,7 @@
 .ps-client-carousel { padding:32px 0 40px; background:#fff; color:#000; border-top:1px solid #000; }
 .ps-client-layout { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr); gap:40px; align-items:center; }
 .ps .ps-client-intro h2 { font-size:clamp(36px,3.6vw,50px); line-height:1.05; max-width:290px; }
-.ps-client-intro h2 em { display:block; }
+.ps-client-intro h2 em { display:inline; }
 .ps-client-controls { display:flex; gap:8px; align-items:center; margin-top:26px; }
 .ps-client-controls button { width:44px; height:44px; border:1px solid #000; border-radius:50%; display:grid; place-items:center; background:#fff; color:#000; }
 .ps-client-controls button svg { width:18px; height:18px; transition:transform .2s ease; }
