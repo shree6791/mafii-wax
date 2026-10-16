@@ -81,7 +81,7 @@ const seasons: (Season & { window: (y: number) => [Ymd, Ymd] })[] = [
   },
   {
     id: "halloween",
-    message: "Halloween party coming up? Wax 2–3 days before your costume reveal.",
+    message: "Costume’s ready. Is your skin? Treat yourself before the party.",
     action: "book",
     window: y => [{ y, m: 10, d: 20 }, { y, m: 10, d: 31 }],
   },
