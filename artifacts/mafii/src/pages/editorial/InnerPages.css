@@ -53,3 +53,12 @@
  .mafii-refined.refined-inner .mf-about-copy h2 { font-size:34px; }
  .mafii-refined.refined-inner .mf-contact-map iframe { height:260px; }
 }
+
+/* Closing booking prompt: light band so it never stacks against the dark footer */
+.mafii-refined .mf-booking-band{background:#fff;border-top:1px solid #ddd;position:relative}
+.mafii-refined .mf-booking-band::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(90deg,#000 0 5px,#fff 5px 12px)}
+.mafii-refined .mf-booking-band .mf-book{background:#000;border-color:#000;color:#fff!important}
+.mafii-refined .mf-booking-band p:not(.mf-label){color:#555}
+.mafii-refined .mf-social a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:767px){.mafii-refined .mf-band{flex-direction:column;align-items:flex-start}}
+.mafii-refined .mf-booking-band .mf-band p:not(.mf-label){margin-top:14px}

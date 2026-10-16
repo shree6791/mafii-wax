@@ -4,11 +4,12 @@ import "./SiteShell.css";
 import { usePageMeta } from "../../lib/site";
 import { pageMetadata } from "../../lib/page-metadata";
 import { booking, page, nav, isCanvasPreview } from "../../lib/site-links";
+import { bookingUrl, trackBookClick } from "../../lib/analytics";
 export { booking, page, image, directions, nav } from "../../lib/site-links";
 
 const bookingLabel = "Book Appointment";
-export function Book() {
-  return <a className="mf-book" href={booking} target="_blank" rel="noopener noreferrer">
+export function Book({ placement = "page" }: { placement?: string }) {
+  return <a className="mf-book" href={bookingUrl(booking, placement)} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick(placement)}>
     {bookingLabel}
   </a>;
 }
@@ -52,8 +53,8 @@ export function SiteShell({ children, active: selected = "" }: { children: React
     <header className="mf-header">
       <div className="mf-wrap mf-nav">
         <a className="mf-brand" href={page("PersonalSpecialist")} aria-label="MAFII home">MAFII<small>WAX STUDIO</small></a>
-        <nav className="mf-navlinks" aria-label="Main navigation"><NavigationLinks active={active} /><Book /></nav>
-        <div className="mf-mobile-book"><Book /></div>
+        <nav className="mf-navlinks" aria-label="Main navigation"><NavigationLinks active={active} /><Book placement="header" /></nav>
+        <div className="mf-mobile-book"><Book placement="header_mobile" /></div>
         <button ref={menuButton} className="mf-menu" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mf-mobile" onClick={() => setOpen(!open)}>
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
@@ -71,12 +72,13 @@ export function SiteShell({ children, active: selected = "" }: { children: React
             <p>Always inclusive and intentional.</p>
           </div>
           <nav aria-label="Footer navigation">
-            <NavigationLinks /><a href={booking} target="_blank" rel="noopener noreferrer">{bookingLabel}</a>
+            <NavigationLinks /><a href={bookingUrl(booking, "footer")} target="_blank" rel="noopener noreferrer" onClick={() => trackBookClick("footer")}>{bookingLabel}</a>
           </nav>
           <div className="mf-contact">
             <a href="tel:+16509306516">650.930.6516</a>
             <a href="mailto:contact@mafiiwaxstudio.com">contact@mafiiwaxstudio.com</a>
             <span>Tue–Fri 9–6 · Sat 8–4</span>
+            <span className="mf-social"><a href="https://www.google.com/maps/search/MAFII+Wax+Studio+Mountain+View/" target="_blank" rel="noopener noreferrer">Google reviews</a> · <a href="https://yelp.to/Vn-Wj6MKaj" target="_blank" rel="noopener noreferrer">Yelp</a></span>
           </div>
         </div>
       </div>
@@ -87,15 +89,15 @@ export function SiteShell({ children, active: selected = "" }: { children: React
 export function PageHead({ label, title, text, book = false }: { label: string; title: ReactNode; text: string; book?: boolean }) {
   return <section className="mf-wrap mf-head">
     <p className="mf-label">{label} / MAFII Wax Studio</p>
-    <div className="mf-head-grid"><h1>{title}</h1><div><p>{text}</p>{book && <Book />}</div></div>
+    <div className="mf-head-grid"><h1>{title}</h1><div><p>{text}</p>{book && <Book placement="page_head" />}</div></div>
   </section>;
 }
 
-export function BookingBand() {
-  return <section className="mf-dark mf-section">
+export function BookingBand({ placement = "booking_band" }: { placement?: string }) {
+  return <section className="mf-section mf-booking-band">
     <div className="mf-wrap mf-band">
       <div><p className="mf-label">Your next appointment</p><h2 style={{ marginTop: 15 }}>Make time for <em>yourself.</em></h2><p>Choose your service and an available time on GlossGenius.</p></div>
-      <Book />
+      <Book placement={placement} />
     </div>
   </section>;
 }

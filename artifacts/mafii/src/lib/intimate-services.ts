@@ -11,4 +11,4 @@ export const intimateServices: ServiceEntry[] = [
   ["Intimate", "Brazilian · MAFII Man", 90, "25 min", "Bikini line, penis, testicles and rear strip."],
   ["Intimate", "Brazilian · MAFII Man · first visit", 90, "30 min", "For your first Brazilian at MAFII; allow 3–4 weeks of growth."],
 ];
-export const menuCheckedDate = "October 15, 2026";
+export const menuCheckedDate = "October 16, 2026";

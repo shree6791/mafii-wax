@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
-import { SiteShell } from "./SiteShell";
+import { SiteShell, BookingBand } from "./SiteShell";
 import { intimateServices } from "../../lib/intimate-services";
 import { IntimateGuide } from "./IntimateGuide";
 import "./Services.css";
 
 const menu:[string,string,number,string,string][]=[
 ...intimateServices,
-["Body","Underarms",25,"10 min","Underarms; upper arms excluded."],["Body","Full arms",60,"30 min","Arms, hands and fingers; shoulders excluded."],["Body","Half arms",50,"20 min","Upper or lower arms. See booking menu for coverage."],["Body","Full legs",90,"30 min","Upper and lower legs, knees, feet and toes."],["Body","Lower legs",60,"20 min","Lower legs, knees, feet and toes."],["Body","Upper legs",65,"20 min","Upper legs, knees and inner thighs."],["Body","Full back",85,"30 min","Full length of back; shoulders excluded."],["Body","Lower back",35,"20 min","Mid-back to the top of the glutes."],["Body","Chest",45,"20 min","Collar bone, nipples and pectoral area."],["Body","Stomach",45,"20 min","Full stomach, including stomach strip."],["Body","Shoulders",35,"20 min","Tops of arms to base of neck."],["Body","Glutes",40,"20 min","Glutes and between the cheeks."],["Body","Glute strip",30,"10 min","Between the cheeks."],
+["Body","Underarms",25,"10 min","Underarms; upper arms excluded."],["Body","Full arms",60,"30 min","Arms, hands and fingers; shoulders excluded."],["Body","Half arms",50,"20 min","Upper or lower arms. See booking menu for coverage."],["Body","Full legs",90,"30 min","Upper and lower legs, knees, feet and toes."],["Body","Lower legs",60,"20 min","Lower legs, knees, feet and toes."],["Body","Upper legs",65,"20 min","Upper legs, knees and inner thighs."],["Body","Inner thigh",30,"10 min","Inner thighs only."],["Body","Knees",25,"20 min","Knees only."],["Body","Toes",25,"20 min","Toes and tops of the feet."],["Body","Full back",85,"30 min","Full length of back; shoulders excluded."],["Body","Lower back",35,"20 min","Mid-back to the top of the glutes."],["Body","Chest",45,"20 min","Collar bone, nipples and pectoral area."],["Body","Chest strip",35,"10 min","Centre strip of the chest."],["Body","Nipples",25,"20 min","Around the nipples."],["Body","Hands",25,"20 min","Hands and fingers."],["Body","Stomach",45,"20 min","Full stomach, including stomach strip."],["Body","Stomach strip",25,"10 min","Navel line only."],["Body","Neck",25,"20 min","Back of the neck."],["Body","Shoulders",35,"20 min","Tops of arms to base of neck."],["Body","Glutes",40,"20 min","Glutes and between the cheeks."],["Body","Glute strip",30,"10 min","Between the cheeks."],
 ["Face","Brows",30,"25 min","Consultation, shaping, waxing, tweezing and trimming."],["Face","Full face",75,"35 min","Brows, cheeks, chin, ears, hairline, nose, sideburns and lips."],["Face","Cheeks",25,"20 min","Cheeks; sideburns excluded."],["Face","Chin",25,"20 min","Chin and lower lip."],["Face","Upper lip",25,"20 min","Upper lip only."],["Face","Lower lip",25,"20 min","Lower lip only."],["Face","Nose",25,"20 min","Inside and outside of the nose."],["Face","Ears",25,"20 min","Inside and outside of the ears."],["Face","Hairline",25,"20 min","Hairline along the forehead."],["Face","Sideburns",25,"20 min","Sideburns; cheeks and neck excluded."],
-["Signature","Signature full body",445,"180 min","Brazilian, underarms, full legs, full arms, chest, stomach, full back, glutes and one facial detail. $111.25 deposit."],["Signature","Signature full body · MAFII Man",490,"180 min","Brazilian, chest, stomach, full back, glutes, underarms, full arms, full legs and nose. $122.50 deposit."]
+["Signature","Signature full body",445,"180 min","Brazilian, underarms, full legs, full arms, chest, stomach, full back, glutes and one facial detail. $111.25 deposit."],["Signature","Signature full body · MAFII Man",490,"180 min","Brazilian, chest, stomach, full back, glutes, underarms, full arms, full legs and nose. $122.50 deposit."],["Signature","High Frequency add-on",25,"10 min","Post-service skin treatment, added to any wax."],["Signature","After-hours reservation",50,"10 min","Appointment outside studio hours, by request and subject to approval."]
 ];
+const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 const groups = [
   {id:"Intimate", title:"Brazilian & Bikini", description:"Bikini line, full bikini and Brazilian waxing."},
   {id:"Body", title:"Body Waxing", description:"Legs, arms, underarms and individual body areas."},
   {id:"Face", title:"Face & Brows", description:"Brow shaping and facial waxing."},
-  {id:"Signature", title:"Full-Body Packages", description:"Multiple areas in one extended appointment."},
+  {id:"Signature", title:"Packages & Add-ons", description:"Full-body appointments, skin add-ons and after-hours reservations."},
 ];
 export function Services(){
 const [category,setCategory]=useState(() => {
@@ -105,7 +106,7 @@ return <SiteShell active="Services">
             return <div className={group.id === "Intimate" ? "mf-service-family" : undefined} key={family}>
               {group.id === "Intimate" && <h4>{family}</h4>}
               {variants.map(r => <details className="mf-service-detail" key={r[1]}>
-                <summary aria-label={`${r[1]}, ${r[3]}, $${r[2]}`}><span className="mf-service-name">{group.id === "Intimate" ? (r[1].split(" · ").slice(1).join(" · ") || "Standard") : r[1]}</span><span className="mf-service-duration">{r[3]}</span><span className="mf-service-cost">${r[2]}</span></summary>
+                <summary aria-label={`${r[1]}, ${r[3]}, $${r[2]}`}><span className="mf-service-name">{group.id === "Intimate" ? capitalize(r[1].split(" · ").slice(1).join(" · ") || "Standard") : r[1]}</span><span className="mf-service-duration">{r[3]}</span><span className="mf-service-cost">${r[2]}</span></summary>
                 <p>{r[4]}</p>
               </details>)}
             </div>;
@@ -115,6 +116,7 @@ return <SiteShell active="Services">
       {(category === "Intimate" || category === "All") && <IntimateGuide />}
     </div>
   </section>
+  <BookingBand placement="services_band" />
 </SiteShell>
 }
 export default Services;
