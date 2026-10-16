@@ -30,8 +30,8 @@ export function PersonalSpecialist() {
         <figure className="ps-photo"><img src={image("beauty-3373716.webp")} alt="Stock close-up of an eye and brow" loading="lazy" /></figure>
         <div>{[
           ["01", "Brazilian & Bikini", "From a tidy bikini line to fully bare. Your call.", "Brazilian"],
-          ["02", "Body Waxing", "Legs, arms, back and more, smooth for weeks.", "Services?category=Body"],
-          ["03", "Face & Brows", "Shaped brows and a smooth, polished face.", "Services?category=Face"],
+          ["02", "Body Waxing", "Legs, arms, back and more, with results that last for weeks.", "Services?category=Body"],
+          ["03", "Face & Brows", "Shaped brows and a clean, polished look.", "Services?category=Face"],
         ].map(([number, title, text, destination]) => <a className="home-service-row" href={page(destination)} key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpRight /></a>)}</div>
       </div>
     </section>

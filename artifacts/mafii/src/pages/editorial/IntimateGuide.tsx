@@ -15,7 +15,7 @@ export function IntimateGuide() {
       )}
     </div>
     <p>First Brazilian or full bikini at MAFII? Book the first-visit option. It builds in extra time, and you’ll agree on coverage together before you start.</p>
-    <p>MAFII Man services are listed separately below, with their own coverage. Everyone is welcome here.</p>
+    <p>MAFII Man services are listed separately in the menu, with their own coverage. Everyone is welcome here.</p>
     <a className="mf-link" href={page("FirstVisit")}>Preparation & aftercare FAQs ↗</a>
   </details>;
 }

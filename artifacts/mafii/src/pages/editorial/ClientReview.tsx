@@ -5,7 +5,7 @@ const reviews = {
   },
   care: {
     author: "Roots",
-    excerpt: "she made the entire experience feel comfortable and professional from start to finish.",
+    excerpt: "…she made the entire experience feel comfortable and professional from start to finish.",
   },
 };
 

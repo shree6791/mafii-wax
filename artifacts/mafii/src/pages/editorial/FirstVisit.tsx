@@ -5,7 +5,7 @@ const groups = [
   { title: "Choosing your appointment", questions: [
     ["Which appointment should I choose?", "Pick the area you’d like waxed. For your first Brazilian or bikini service at MAFII, choose the first-visit option; it includes extra time. Not sure which one fits? Call 650.930.6516 before booking."],
     ["Are all genders welcome?", "Yes, always. MAFII is women-owned and welcomes every gender, with a dedicated MAFII Man menu."],
-    ["How do I book an appointment?", "Tap Book Appointment, choose your service and a time that suits you, and confirm on GlossGenius."]
+    ["How do I book an appointment?", "Tap Book, choose your service and a time that suits you, and confirm on GlossGenius."]
   ] },
   { title: "Before your visit", questions: [
     ["How much hair growth do I need?", "About 3–4 weeks of growth, roughly the length of a grain of rice, gives the smoothest result. Skip shaving beforehand. For other areas, just ask."],
@@ -24,7 +24,7 @@ const policies = [
   ["Cancellation & rescheduling", "Please provide at least 24 hours’ notice if you need to cancel or reschedule your appointment."],
   ["Running late", "A 5-minute grace period is provided for shorter services and a 10-minute grace period for longer services. Arriving beyond the grace period may require your appointment to be shortened or rescheduled."],
   ["Missed appointments", "Repeated last-minute cancellations or missed appointments may require a deposit before future appointments can be reserved."],
-  ["Signature service deposits", "The published Signature full-body services require a 25% reservation deposit at booking. Review the selected service and current terms on GlossGenius."]
+  ["Signature service deposits", "Signature full-body services need a 25% deposit when you book on GlossGenius."]
 ];
 export function FirstVisit() {
   const topics = [...groups, { title: "Appointment policies", questions: policies }];

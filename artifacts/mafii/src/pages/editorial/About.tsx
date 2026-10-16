@@ -13,8 +13,8 @@ export function About() {
         <figcaption>MAFII Wax Studio · Inside Sola Salon Studios</figcaption>
       </figure>
       <div className="mf-about-copy">
-        <h2>Your specialist.<br />Every visit.</h2>
-        <p>With over seven years of waxing experience, including years at a leading national wax studio, MAFII’s owner brings expert care to Brazilian and full-body waxing in her own black-and-white studio.</p>
+        <h2>Meet your specialist.</h2>
+        <p>With over seven years of waxing experience, including years at a leading national wax studio, MAFII’s owner brings expert care to Brazilian and full-body waxing in her own private studio.</p>
         <p>Here, you talk directly with the person doing your wax. Share how much you’d like removed, ask anything and mention any skin concerns. First appointment or regular routine, you’ll feel comfortable and looked after from start to finish.</p>
       </div>
     </section>

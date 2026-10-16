@@ -51,8 +51,8 @@ export function ClientCarousel() {
             <ClientReview review={review} />
           </div>)}
           <div className="ps-client-card ps-client-last" role="group" aria-roledescription="slide" aria-label="3 of 3, Google reviews" aria-hidden={active !== 2}>
-            <p>Read every review.</p>
-            <a className="mf-link" href={reviewSource} tabIndex={active === 2 ? 0 : -1} target="_blank" rel="noopener noreferrer" aria-label="Read reviews on Google (opens in a new tab)" data-testid="link-google-reviews">Read reviews on Google <ArrowUpRight aria-hidden="true" /></a>
+            <p>91 reviews, all five stars.</p>
+            <a className="mf-link" href={reviewSource} tabIndex={active === 2 ? 0 : -1} target="_blank" rel="noopener noreferrer" aria-label="Read reviews on Google (opens in a new tab)" data-testid="link-google-reviews">Read them on Google <ArrowUpRight aria-hidden="true" /></a>
           </div>
         </div>
       </div>

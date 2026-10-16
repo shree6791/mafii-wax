@@ -1,4 +1,5 @@
 import { SiteShell } from "./SiteShell";
+import { directions } from "../../lib/site-links";
 
 export function Visit() {
   return <SiteShell active="Visit">
@@ -17,7 +18,7 @@ export function Visit() {
         </div>
       </div>
       <div className="mf-contact-map">
-        <address><strong>MAFII Wax Studio</strong>550 Showers Drive D006, Studio 21<br />Mountain View CA 94040<br />Inside Sola Salon Studios</address>
+        <address><strong>MAFII Wax Studio</strong>550 Showers Drive D006, Studio 21<br />Mountain View, CA 94040<br />Inside Sola Salon Studios<br /><a className="mf-link" href={directions} target="_blank" rel="noopener noreferrer">Get directions</a></address>
         <iframe
           title="Google Map: MAFII Wax Studio, 550 Showers Drive, Mountain View"
           src="https://maps.google.com/maps?q=550+Showers+Drive+Mountain+View+CA+94040&z=16&output=embed"
